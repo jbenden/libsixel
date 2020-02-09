@@ -57,6 +57,7 @@ package.json.in
 include/*.h
 converters/img2sixel
 converters/sixel2png
+converters/stterm-w3m-img
 converters/*.sixel
 converters/*.png
 tools/libsixel-config

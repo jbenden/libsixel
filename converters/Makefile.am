@@ -28,6 +28,15 @@ CLEANFILES = *.gcno *.gcda *.gcov \
   $(builddir)/tmp/server.crt \
   $(builddir)/tmp/testfile
 
+if WANT_STTERM_W3M_IMG
+bin_PROGRAMS += stterm-w3m-img
+stterm_w3m_img_SOURCES = $(srcdir)/stterm-w3m-img.c $(srcdir)/stterm-w3m-img.h $(srcdir)/stterm-util.h $(srcdir)/parsearg.h $(srcdir)/malloc_stub.c $(srcdir)/malloc_stub.h
+stterm_w3m_img_CPPFLAGS = -I$(top_builddir)/include/ $(AM_CPPFLAGS)
+stterm_w3m_img_CFLAGS = $(CFLAGS) $(AM_CFLAGS) $(MAYBE_COVERAGE)
+stterm_w3m_img_LDADD = $(top_builddir)/src/libsixel.la
+dist_man_MANS += $(srcdir)/stterm-w3m-img.1
+endif
+
 if WANT_IMG2SIXEL
 bin_PROGRAMS += img2sixel
 img2sixel_SOURCES = $(srcdir)/img2sixel.c $(srcdir)/malloc_stub.c $(srcdir)/malloc_stub.h

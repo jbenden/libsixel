@@ -107,6 +107,10 @@ It also works with [ranger](https://github.com/hut/ranger).
   ![w3m-yaimg-sixel](https://raw.githubusercontent.com/saitoha/libsixel/data/data/w3m-yaimg-sixel.jpg)
 
 
+`stterm-w3m-img(1)` can be used with a patched suckless.org's
+[stterm](https://st.suckless.org/) and has been used for
+displaying images inside terminal-based file managers.
+
 ### X11 on SIXEL terminals
 
 [Xsixel](https://github.com/saitoha/xserver-sixel) is a kdrive server implementation for SIXEL terminals.

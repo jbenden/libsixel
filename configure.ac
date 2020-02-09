@@ -80,6 +80,13 @@ AC_ARG_ENABLE([sixel2png],
               [enable_sixel2png=yes])
 AM_CONDITIONAL(WANT_SIXEL2PNG, test x$enable_sixel2png != xno)
 
+AC_ARG_ENABLE([stterm-w3m-img],
+              [AS_HELP_STRING([--disable-stterm-w3m-img],
+                              [whether to build stterm-w3m-img (default: yes)])],
+              [],
+              [enable_stterm_w3m_img=yes])
+AM_CONDITIONAL(WANT_STTERM_W3M_IMG, test x$enable_stterm_w3m_img != xno)
+
 AC_ARG_WITH([gdk-pixbuf2],
             [AS_HELP_STRING([--with-gdk-pixbuf2],
                             [whether to build with gdk-pixbuf2 (default: no)])],
